@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Enhanced Form</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 20px auto;
+    line-height: 1.5;
+  }
+  header, footer {
+    background: #eee;
+    padding: 1em;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  main section {
+    margin-bottom: 2em;
+  }
+  form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0.8em 1em;
+    align-items: center;
+  }
+  label {
+    font-weight: bold;
+  }
+  input, textarea, select, button {
+    padding: 0.5em;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  button {
+    grid-column: 2 / 3;
+    width: fit-content;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1em;
+  }
+  th, td {
+    border: 1px solid #aaa;
+    padding: 0.5em;
+    text-align: left;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1em;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Enhanced Form Example</h1>
+</header>
+
+<main>
+  <section>
+    <h2>Introduction</h2>
+    <p>This page demonstrates a well-structured HTML5 form with proper validation and semantic layout.</p>
+  </section>
+
+  <section>
+    <h2>Features</h2>
+    <ul>
+      <li>Responsive and accessible layout</li>
+      <li>Complete HTML5 form with many input types</li>
+      <li>Use of lists, tables, and embedded media</li>
+    </ul>
+
+    <h3>Specifications</h3>
+    <table>
+      <thead>
+        <tr><th>Feature</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Validation</td><td>HTML5 native validation used</td></tr>
+        <tr><td>Form attributes</td><td>Placeholder, required, autocomplete, readonly</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Gallery</h2>
+    <img src="https://via.placeholder.com/600x300.png?text=Sample+Image" alt="Sample Image" />
+    <video controls>
+      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm" />
+      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <section>
+    <h2>Contact Form</h2>
+    <form action="#" method="post" novalidate>
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" placeholder="John Doe" required autocomplete="name" />
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required max="2025-12-31" />
+
+      <label for="bio">Biography:</label>
+      <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself" required></textarea>
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="Enter username" required minlength="4" maxlength="15" />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" required minlength="6" />
+
+      <label for="newsletter">Subscribe to Newsletter:</label>
+      <input type="checkbox" id="newsletter" name="newsletter" checked />
+
+      <label for="contactMethod">Preferred Contact Method:</label>
+      <select id="contactMethod" name="contactMethod" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="email">Email</option>
+        <option value="phone">Phone</option>
+        <option value="none">No Contact</option>
+      </select>
+
+      <label for="referral" readonly>Referral Code (readonly):</label>
+      <input type="text" id="referral" name="referral" value="ABC123XYZ" readonly />
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Your Company. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
